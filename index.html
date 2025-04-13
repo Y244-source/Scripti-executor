@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripti executor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Black background */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #fff; /* White text for better contrast */
+        }
+        header {
+            background-color: #ff69b4; /* Pink header */
+            padding: 20px;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #222; /* Dark gray container background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+        .btn-download {
+            display: inline-block;
+            background-color: #888; /* Gray buttons */
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .btn-download:hover {
+            background-color: #aaa; /* Lighter gray on hover */
+        }
+        .reviews {
+            text-align: left;
+            margin-top: 40px;
+        }
+        .review {
+            background: #333; /* Darker gray for reviews */
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #555; /* Gray border */
+        }
+        form {
+            margin-top: 20px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #444; /* Dark border */
+            border-radius: 5px;
+            background: #222; /* Dark input background */
+            color: white; /* White text in inputs */
+        }
+        form button {
+            background-color: #888; /* Gray buttons */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        form button:hover {
+            background-color: #aaa; /* Lighter gray on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Download scripti</h1>
+        <nav>
+            <a href="#reviews">click me to see reviews</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Scripti Roblox Executor</h2>
+        <p>99% unc ⚠️NEVER EXPLOIT ON YOUR MAIN⚠️</p>
+        <!-- Add your images here -->
+        <img src="https://files.catbox.moe/zr0jev.png" alt="Roblox Tool Screenshot" width="100%">
+        <a href="https://gofile.io/d/rMe7gp" class="btn-download" target="_blank">Download Now</a>
+    </div>
+
+    <div class="container reviews" id="reviews">
+        <h2>User Reviews</h2>
+        <!-- Fake reviews -->
+        <div class="review">
+            <h3>pmo</h3>
+            <p>Its very nice , the owner is super segma</p>
+        </div>
+        <div class="review">
+            <h3>Niggamna</h3>
+            <p>Its 99% unc and still have not been banned , but i hate running it as admin ts pmo</p>
+        </div>
+
+        <!-- Add your own review -->
+        <form id="review-form">
+            <h3>Add Your Review</h3>
+            <input type="text" id="reviewer-name" placeholder="Your Name" required>
+            <textarea id="review-text" placeholder="Your Review" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // Handle form submission
+        document.getElementById("review-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Get input values
+            const name = document.getElementById("reviewer-name").value;
+            const review = document.getElementById("review-text").value;
+
+            // Create a new review element
+            const newReview = document.createElement("div");
+            newReview.classList.add("review");
+            newReview.innerHTML = `<h3>${name}</h3><p>${review}</p>`;
+
+            // Add the new review to the reviews section
+            const reviewsContainer = document.querySelector(".reviews");
+            reviewsContainer.appendChild(newReview);
+
+            // Reset the form
+            document.getElementById("review-form").reset();
+        });
+    </script>
+</body>
+</html>
